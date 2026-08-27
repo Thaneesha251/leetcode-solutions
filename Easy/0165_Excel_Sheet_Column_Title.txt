@@ -1,0 +1,9 @@
+class Solution:
+    def convertToTitle(self, colN):
+        res=""
+        while colN>0:
+            colN-=1
+            rem=colN%26
+            res=chr(rem+ord('A'))+res
+            colN//=26
+        return res
